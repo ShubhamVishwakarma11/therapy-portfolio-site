@@ -26,12 +26,13 @@ const NavBar = () => {
   }, []);
 
   return (
+    <>
     <nav 
       className={clsx(
         'bg-white flex justify-center pt-1 items-center w-full transition-all fixed', 
         `${isScrolled && "h-[4.5rem]"}`,
         `${!isScrolled && "h-[6rem]"}`)}>
-            <div className='w-90% px-8 flex justify-between items-center'>
+            <div className='w-90% px-10 flex justify-between items-center'>
               <div className="">
                 <Image src={!isScrolled ? "/ufo1.png" : "/ufo2.png"} width={64} height={64} alt="logo" />
               </div>
@@ -44,6 +45,8 @@ const NavBar = () => {
               <button className='bg-black text-white px-6 py-3 rounded-full'>Download app</button>
             </div>
     </nav>
+    <div className="h-[6rem]"></div>
+    </>
   )
 }
 
